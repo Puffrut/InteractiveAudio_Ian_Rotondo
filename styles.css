@@ -20,7 +20,7 @@ body{
     border-radius: 30px;
     padding: 20px;
     margin-top: 50px;
-    margin-bottom: 20px;
+    
     animation: rotate 8s linear infinite;
     animation-play-state: paused;
   

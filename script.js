@@ -35,7 +35,7 @@ function playMusic(music){
 //start playing song and start animation
 function playTrack(){
     action.classList.add(`play`)
-    changeBtn.classList.add(`fa-pause-circle`)
+    
     
     audio.play()
 }
@@ -100,3 +100,7 @@ playBtn.addEventListener(`click`, running)
 
 backBtn.addEventListener(`click`, backOne)
 nextBtn.addEventListener(`click`, nextOne)
+
+//event listener to transition to next song when song ends
+
+audio.addEventListener(`ended`, nextOne)
