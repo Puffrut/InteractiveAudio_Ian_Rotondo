@@ -10,16 +10,16 @@ let backBtn = document.querySelector(`#back`)
 
 let playBtn = document.querySelector(`#play`)
 
-let changeBtn = document.querySelector(`.btnLarge`)
-
 let nextBtn = document.querySelector(`#next`)
+
+
 
 
 // Song titles
 let music = [`bensound-dreams`, `bensound-moose`, `bensound-scifi`]
 
 //keep track of current song
-let musicIndex = 0
+let musicIndex = 1
 
 //initialize default song and details
 playMusic(music[musicIndex])
@@ -35,7 +35,8 @@ function playMusic(music){
 //start playing song and start animation
 function playTrack(){
     action.classList.add(`play`)
-    
+    playBtn.querySelector('i.fas').classList.remove('fa-play-circle')
+    playBtn.querySelector('i.fas').classList.add('fa-pause-circle')
     
     audio.play()
 }
@@ -43,6 +44,8 @@ function playTrack(){
 //pause song and kill animation
 function pauseTrack(){
     action.classList.remove(`play`)
+    playBtn.querySelector('i.fas').classList.add('fa-play-circle')
+    
     
     
     audio.pause()
@@ -104,3 +107,4 @@ nextBtn.addEventListener(`click`, nextOne)
 //event listener to transition to next song when song ends
 
 audio.addEventListener(`ended`, nextOne)
+

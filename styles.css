@@ -1,4 +1,4 @@
-
+/* page heading */
 h1{
     font-family: 'Audiowide';
     color:white;
@@ -14,7 +14,7 @@ body{
     margin: 0;
     background-color: darkslategray;
 }
-
+/* div that houses the album image */
 .playerContainer{
     background-color:black;
     border-radius: 30px;
@@ -25,7 +25,7 @@ body{
     animation-play-state: paused;
   
 }
-
+/* adding the "play" class to inject with JS to start animation */
 .playerContainer.play img{
     border-radius: 50%;
     width:250px;
@@ -35,10 +35,13 @@ body{
     animation-play-state: running;
 }
 
+/* specifying the height and width to ensure all images are same size */
 .playerContainer img{
     max-width: 338px;
     max-height: 250px;
 }
+
+/* h3 that houses the current song being played */
 #trackName{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -52,14 +55,17 @@ body{
     
 }
 
-
+/* the div that houses the buttons */
 .playerControls{
     border: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    border-radius: 15%;
 }
 
+/* style for the back and next buttons */
 .btn{
     background-color: black;
     color: white;
@@ -79,6 +85,7 @@ body{
     outline: 0;
   }
 
+  /* style for the large play button */
 .btnLarge{
     background-color: black;
     color: white;
@@ -90,11 +97,21 @@ body{
     margin: 0 20px;
 }
 
-.playerControls{
-    background-color: black;
-    border-radius: 15%;
+/* adding hover to the buttons */
+#play:hover{
+    color:red;
+
 }
 
+#back:hover{
+    color:red;
+}
+
+#next:hover{
+    color:red;
+}
+
+/* key frames for rotation of image */
 @keyframes rotate {
     from {
       transform: rotate(0deg);
